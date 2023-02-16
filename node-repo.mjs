@@ -20,7 +20,7 @@ console.log(chalk.yellow("\nAdding git remote 'origin'..."))
 childProcess.execSync(`git remote add origin "${remoteUrl}"`)
 
 console.log(chalk.yellow('\nConfiguring package.json...'))
-childProcess.execSync('npm pkg set scripts.init="npx -y zx https://gitlab.dev.davenportiowa.com/-/snippets/1/raw/master/init.mjs --script node-project"')
+childProcess.execSync('npm pkg set scripts.init="npx -y zx https://gitlab.com/-/snippets/2501467/raw/main/init.mjs --script node-project"')
 childProcess.execSync(`npm pkg set name="${packageName || packageJson.name}"`)
 childProcess.execSync(`npm pkg set author="${packageAuthor || packageJson.author}"`)
 childProcess.execSync(`npm pkg set description="${packageDescription || ' '}"`)
