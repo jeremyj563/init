@@ -10,9 +10,11 @@ const packageAuthor = await question(`📘 Enter new package author: (${chalk.gr
 const packageDescription = await question(`🔖 Enter new package description: (${chalk.yellow('optional')}) `)
 const remoteUrl = await question(`🌐 Enter new repo remote URL: (${chalk.red('required')}) `)
 
-console.log(chalk.yellow('\nDeleting .git folder and README.md...'))
+console.log(chalk.yellow('\nDeleting template .git folder...'))
 await fs.remove('.git')
-await fs.remove('README.md')
+
+console.log(chalk.yellow('\nSetting up project README.md...'))
+await fs.move('README.project.md', 'README.md', { overwrite: true })
 
 console.log(chalk.yellow('\nRunning git init...'))
 childProcess.execSync('git init --initial-branch=main')
