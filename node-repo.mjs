@@ -34,9 +34,6 @@ console.log(chalk.yellow('\nCommitting all template files...'))
 childProcess.execSync('git add .')
 childProcess.execSync('git commit -m "added template files"')
 
-console.log(chalk.yellow("\nCreating 'test' branch..."))
-childProcess.execSync('git branch test master')
-
 console.log(chalk.yellow("\nPushing all branches to remote 'origin'..."))
 childProcess.execSync('git push --all --set-upstream origin --force')
 
