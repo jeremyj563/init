@@ -8,7 +8,7 @@ const packageJson = require('./package.json')
 const packageName = await question(`\n📦 Enter new package name: (${chalk.green(baseDirName)}) `)
 const packageAuthor = await question(`📘 Enter new package author: (${chalk.green(packageJson.author)}) `)
 const packageDescription = await question(`🔖 Enter new package description: (${chalk.yellow('optional')}) `)
-const remoteUrl = await question(`🌐 Enter new repo remote URL: (${chalk.red('required')}) `)
+const remoteUrl = await question(`🌐 Enter new repo remote URL (WARNING: any repo at this URL will be wiped out!): (${chalk.red('required')}) `)
 
 console.log(chalk.yellow('\nDeleting template .git folder...'))
 await fs.remove('.git')
