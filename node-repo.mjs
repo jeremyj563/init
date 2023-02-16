@@ -2,9 +2,10 @@
 
 import { downloadScript } from './init.mjs'
 import childProcess from 'child_process'
+const baseDirName = path.basename(__dirname)
 const packageJson = require('./package.json')
 
-const packageName = await question(`\n📦 Enter new package name: (${chalk.green(packageJson.name)}) `)
+const packageName = await question(`\n📦 Enter new package name: (${chalk.green(baseDirName)}) `)
 const packageAuthor = await question(`📘 Enter new package author: (${chalk.green(packageJson.author)}) `)
 const packageDescription = await question(`🔖 Enter new package description: (${chalk.yellow('optional')}) `)
 const remoteUrl = await question(`🌐 Enter new repo remote URL: (${chalk.red('required')}) `)
