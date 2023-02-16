@@ -6,7 +6,7 @@ const os = require('os')
 const url = require('url')
 const __tmpdir = os.tmpdir()
 const __cwd = process.cwd()
-const __base_url = 'https://gitlab.dev.davenportiowa.com/-/snippets/1/raw/master'
+const __base_url = 'https://gitlab.com/-/snippets/2501467/raw/main'
 
 export async function downloadScript(script, baseUrl = __base_url) {
     const scriptUrl = `${baseUrl}/${script}`
