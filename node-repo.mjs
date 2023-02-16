@@ -14,7 +14,7 @@ await fs.remove('.git')
 await fs.remove('README.md')
 
 console.log(chalk.yellow('\nRunning git init...'))
-childProcess.execSync('git init --initial-branch=master')
+childProcess.execSync('git init --initial-branch=main')
 
 console.log(chalk.yellow("\nAdding git remote 'origin'..."))
 childProcess.execSync(`git remote add origin "${remoteUrl}"`)

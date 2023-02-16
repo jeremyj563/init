@@ -28,7 +28,7 @@ console.log(chalk.yellow('\nConfiguring local git repository...'))
 childProcess.execSync('git config --local core.fileMode false')
 childProcess.execSync('git config --local push.pushoption ci.skip')
 
-console.log(chalk.yellow('Installing project dependencies...'))
+console.log(chalk.yellow('\nInstalling project dependencies...'))
 childProcess.execSync('npm i')
 
 if (! importUrl.searchParams.get('init-repo')) {
