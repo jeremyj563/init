@@ -28,17 +28,8 @@ console.log(chalk.yellow('\nConfiguring local git repository...'))
 childProcess.execSync('git config --local core.fileMode false')
 childProcess.execSync('git config --local push.pushoption ci.skip')
 
-console.log(chalk.yellow('\nInstalling global dependencies...\n'))
-try {
-    childProcess.execSync('npm list --global dotenv-cli')
-} catch (error) {
-    if (error.status === 1) {
-        childProcess.execSync('npm install --global dotenv-cli')
-    }
-}
-
 console.log(chalk.yellow('Installing project dependencies...'))
-childProcess.execSync('npm run i')
+childProcess.execSync('npm i')
 
 if (! importUrl.searchParams.get('init-repo')) {
     console.log(chalk.blue('\nFinished! 🚀'))
