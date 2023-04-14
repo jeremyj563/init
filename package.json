@@ -1,0 +1,13 @@
+{
+  "name": "init",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/snippets/2501467.git"
+  },
+  "scripts": {
+    "pretty": "prettier --write *.mjs"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7"
+  }
+}
