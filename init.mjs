@@ -1,12 +1,12 @@
 #!/usr/bin/env zx
 
 $.verbose = false
-const fs = require("fs")
-const os = require("os")
-const url = require("url")
+const fs = require('fs')
+const os = require('os')
+const url = require('url')
 const __tmpdir = os.tmpdir()
 const __cwd = process.cwd()
-const __base_url = "https://gitlab.com/-/snippets/2501467/raw/main"
+const __base_url = 'https://gitlab.com/-/snippets/2501467/raw/main'
 
 export async function downloadScript(script, baseUrl = __base_url) {
     const scriptUrl = `${baseUrl}/${script}`
@@ -21,7 +21,7 @@ export async function downloadScript(script, baseUrl = __base_url) {
 main()
 
 async function main() {
-    const thisScript = "init.mjs"
+    const thisScript = 'init.mjs'
     await downloadScript(thisScript)
 
     const nextScript = await downloadScript(`${argv.script}.mjs`)
